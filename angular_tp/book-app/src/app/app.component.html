@@ -1,0 +1,12 @@
+<div *ngIf="books.length > 0; else emptyList" class="book-container">
+  <div class="book-card" *ngFor="let book of books">
+    <input type="checkbox" [checked]="book.isRead" disabled class="checkbox" />
+    <span [class.read]="book.isRead">{{ book.name }}</span>
+  </div>
+</div>
+
+<ng-template #emptyList>
+  <div class="empty-list">
+    <p>📚 La liste des livres est vide.</p>
+  </div>
+</ng-template>

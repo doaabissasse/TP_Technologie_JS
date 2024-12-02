@@ -1,0 +1,39 @@
+/* Style pour la case à cocher */
+.checkbox {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    accent-color: #4caf50; /* Couleur verte personnalisée pour les navigateurs modernes */
+    cursor: pointer;
+  }
+  
+  /* Personnalisation avancée pour les navigateurs qui ne supportent pas 'accent-color' */
+  .checkbox {
+    -webkit-appearance: none; /* Supprime le style par défaut */
+    -moz-appearance: none; /* Supprime le style par défaut */
+    appearance: none; /* Supprime le style par défaut */
+    background-color: #f1f1f1;
+    border: 2px solid #4caf50;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  /* Ajout de l'icône de coche */
+  .checkbox:checked {
+    background-color: #4caf50;
+    border-color: #4caf50;
+  }
+  
+  .checkbox:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+  }
+  
